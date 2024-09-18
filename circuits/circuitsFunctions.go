@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fatih/color"
-	"github.com/go-resty/resty/v2"
 	"github.com/spf13/viper"
 	"io"
 	"log"
