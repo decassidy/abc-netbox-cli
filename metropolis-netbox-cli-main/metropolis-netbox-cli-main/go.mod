@@ -1,4 +1,4 @@
-module github.com/decassidy/metropolis-netbox-cli
+module github.com/decassidy/abc-netbox-cli
 
 go 1.22.1
 
