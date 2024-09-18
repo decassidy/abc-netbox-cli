@@ -23,7 +23,7 @@ THE SOFTWARE.
 package main
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd"
+	"github.com/decassidy/abc-netbox-cli/cmd"
 	"github.com/spf13/cobra/doc"
 	"log"
 )
