@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ var DeleteCircuitsProvidersByIdCmd = &cobra.Command{
 	Use:   "deleteCircuitsProvidersById",
 	Short: "Delete an provider object by ID",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   Delete an provider object by ID`,
 	Run: func(cmd *cobra.Command, args []string) {
 		apiConnectionDeleteID("cmd.circuits.circuits_api_url.providers_id")

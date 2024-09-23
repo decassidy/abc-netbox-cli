@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package circuits
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"log"
@@ -62,17 +62,17 @@ var GetCircuitsProviderAccountsCmd = &cobra.Command{
 	Use:   "getCircuitsProviderAccounts",
 	Short: "GET a list of Provider Account objects.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   GET a list of Provider Account objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		responseObject := new(providerAccounts)
 		ApiConnectionNonID(responseObject, "GET", "cmd.circuits.circuits_api_url.provider_accounts")
 
 		if responseObject.Count != 0 {
-			color.Cyan("\nMetropolis Total Provider Accounts in Netbox: "+color.YellowString("%d"), responseObject.Count)
+			color.Cyan("\nABC Total Provider Accounts in Netbox: "+color.YellowString("%d"), responseObject.Count)
 			for _, account := range responseObject.Results {
 				color.Cyan("\n============================================================================")
-				color.Cyan("\n\tMetropolis Provider Account Name: "+color.YellowString("%s\n"), account.Display)
+				color.Cyan("\n\tABC Provider Account Name: "+color.YellowString("%s\n"), account.Display)
 				color.Cyan("============================================================================\n")
 				color.Cyan("\tID: "+color.YellowString("%d"), account.Id)
 				color.Cyan("\tURL: "+color.YellowString("%s"), account.Url)
@@ -123,7 +123,7 @@ Metropolis Netbox Automation Tools:
 				color.Cyan("\tLast Updated: "+color.YellowString("%s"), account.LastUpdated)
 			}
 		} else {
-			color.Cyan("\nMetropolis Total Provider Accounts in Netbox: " + color.RedString("No provider accounts found on the server"))
+			color.Cyan("\nABC Total Provider Accounts in Netbox: " + color.RedString("No provider accounts found on the server"))
 		}
 	},
 }

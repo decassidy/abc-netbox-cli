@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ var PatchCircuitsCircuitTypesByIdCmd = &cobra.Command{
 	Use:   "patchCircuitsCircuitTypesById",
 	Short: "Patch an circuit type object by Netbox ID.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   Patch an circuit type object by Netbox ID.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		apiConnectionPatchID("cmd.circuits.circuits_api_url.circuit_types_id")

@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -86,7 +86,7 @@ var GetCircuitsCircuitTerminationsByIdCmd = &cobra.Command{
 	Use:   "getCircuitsCircuitTerminationsById",
 	Short: "GET a Circuit Termination object by ID.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   GET a Circuit Termination object by ID.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		responseObject := new(TerminationsByID)

@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -30,9 +30,9 @@ import (
 // PostCircuitsCircuitsCmd represents the postCircuits command
 var PostCircuitsCircuitsCmd = &cobra.Command{
 	Use:   "postCircuitsCircuits",
-	Short: "POST a list of Metropolis Circuit objects.",
+	Short: "POST a list of ABC Circuit objects.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   POST a list of Circuit objects.
 
 See Netbox API documentation for more information.`,

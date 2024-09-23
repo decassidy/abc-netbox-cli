@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package circuits
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"log"
@@ -67,10 +67,10 @@ to quickly create a Cobra application.`,
 		ApiConnectionNonID(responseObject, "GET", "cmd.circuits.circuits_api_url.providers")
 
 		if responseObject.Count != 0 {
-			color.Cyan("\nMetropolis Total Providers in Netbox: "+color.YellowString("%d"), responseObject.Count)
+			color.Cyan("\nABC Total Providers in Netbox: "+color.YellowString("%d"), responseObject.Count)
 			for _, provider := range responseObject.Results {
 				color.Cyan("\n============================================================================")
-				color.Cyan("\n\tMetropolis Provider Name: "+color.YellowString("%s\n"), provider.Display)
+				color.Cyan("\n\tABC Provider Name: "+color.YellowString("%s\n"), provider.Display)
 				color.Cyan("============================================================================\n")
 				color.Cyan("\tID: "+color.YellowString("%d"), provider.Id)
 				color.Cyan("\tURL: "+color.YellowString("%s"), provider.Url)

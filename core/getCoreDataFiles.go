@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package core
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/spf13/cobra"
 )
 
@@ -48,8 +48,8 @@ type dataFiles struct {
 // GetCoreDataFilesCmd represents the getCoreDataFiles command
 var GetCoreDataFilesCmd = &cobra.Command{
 	Use:   "getCoreDataFiles",
-	Short: "Get Metropolis Netbox core data file objects.",
-	Long:  `Get Metropolis Netbox core data file objects.`,
+	Short: "Get ABC Netbox core data file objects.",
+	Long:  `Get ABC Netbox core data file objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		responseObject := new(dataFiles)
 		dcim.ApiConnectionNonID(responseObject, "GET", "cmd.core.core_api_url.data_files")

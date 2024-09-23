@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package circuits
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"log"
@@ -47,7 +47,7 @@ var GetCircuitsCircuitTypesByIdCmd = &cobra.Command{
 	Use:   "getCircuitsCircuitTypesById",
 	Short: "Get a circuit type object.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   Get a circuit type object.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		responseObject := new(circuitTypesByID)
@@ -55,7 +55,7 @@ Metropolis Netbox Automation Tools:
 
 		if responseObject.Id > 0 {
 			color.Cyan("\n============================================================================")
-			color.Cyan("\n\tMetropolis Circuit Type Name: "+color.YellowString("%s\n"), responseObject.Display)
+			color.Cyan("\n\tABC Circuit Type Name: "+color.YellowString("%s\n"), responseObject.Display)
 			color.Cyan("============================================================================\n")
 			color.Cyan("\tID: "+color.YellowString("%d"), responseObject.Id)
 			color.Cyan("\tURL: "+color.YellowString("%s"), responseObject.Url)

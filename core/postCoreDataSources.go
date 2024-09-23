@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,11 +27,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// PostCoreDataSourcesCmd represents the postCoreDataSources command. It is used to post a list of Metropolis Netbox data source objects.
+// PostCoreDataSourcesCmd represents the postCoreDataSources command. It is used to post a list of ABC Netbox data source objects.
 var PostCoreDataSourcesCmd = &cobra.Command{
 	Use:   "postCoreDataSources",
-	Short: "Post a list of Metropolis Netbox data source objects.",
-	Long:  `Post a list of Metropolis Netbox data source objects.`,
+	Short: "Post a list of ABC Netbox data source objects.",
+	Long:  `Post a list of ABC Netbox data source objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("postCoreDataSources called")
 	},

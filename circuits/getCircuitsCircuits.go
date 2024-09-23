@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package circuits
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"log"
@@ -99,17 +99,17 @@ var GetCircuitsCircuitsCmd = &cobra.Command{
 	Use:   "getCircuitsCircuits",
 	Short: "Get a list of Circuits objects.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   Get a list of Circuits objects`,
 	Run: func(cmd *cobra.Command, args []string) {
 		responseObject := new(circuit)
 		ApiConnectionNonID(responseObject, "GET", "cmd.circuits.circuits_api_url.circuits")
 
 		if responseObject.Count != 0 {
-			color.Cyan("\nMetropolis Total Circuits in Netbox: "+color.YellowString("%d"), responseObject.Count)
+			color.Cyan("\nABC Total Circuits in Netbox: "+color.YellowString("%d"), responseObject.Count)
 			for _, circuit := range responseObject.Results {
 				color.Cyan("\n============================================================================")
-				color.Cyan("\n\tMetropolis Circuit Name: "+color.YellowString("%s\n"), circuit.Display)
+				color.Cyan("\n\tABC Circuit Name: "+color.YellowString("%s\n"), circuit.Display)
 				color.Cyan("============================================================================\n")
 				color.Cyan("\tID: "+color.YellowString("%d"), circuit.Id)
 				color.Cyan("\tURL: "+color.YellowString("%s"), circuit.Url)
@@ -294,8 +294,8 @@ Metropolis Netbox Automation Tools:
 						color.Cyan("\tTags: " + color.RedString("No tags found for circuit: ") + color.YellowString("%s", circuit.Display))
 					}
 				}
-				color.Cyan("\tMetropolis Circuit Provider Created: "+color.YellowString("%s"), circuit.Created)
-				color.Cyan("\tMetropolis Circuit Provider Last Updated: "+color.YellowString("%s"), circuit.LastUpdated)
+				color.Cyan("\tABC Circuit Provider Created: "+color.YellowString("%s"), circuit.Created)
+				color.Cyan("\tABC Circuit Provider Last Updated: "+color.YellowString("%s"), circuit.LastUpdated)
 			}
 		} else {
 			color.Cyan("\tCircuits: " + color.RedString("No circuits found on the server: "))

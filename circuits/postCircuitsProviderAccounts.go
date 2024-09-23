@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ var PostCircuitsProviderAccountsCmd = &cobra.Command{
 	Use:   "postCircuitsProviderAccounts",
 	Short: "Post a list of provider account objects.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   Post a list of provider account objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 

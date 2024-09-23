@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -30,8 +30,8 @@ import (
 // PostCircuitsCircuitTypeCmd PostCircuitsCircuitTypesCmd represents the postCircuitsCircuitTypes command
 var PostCircuitsCircuitTypeCmd = &cobra.Command{
 	Use:   "postCircuitType",
-	Short: "POST a list of Metropolis Circuit Type objects.",
-	Long:  `POST a list of Metropolis Circuit Type objects.`,
+	Short: "POST a list of ABC Circuit Type objects.",
+	Long:  `POST a list of ABC Circuit Type objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		apiConnectionPost("cmd.circuits.circuits_api_url.circuit_types_id")
 	},

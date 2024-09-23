@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package circuits
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/spf13/cobra"
 	"log"
 )
@@ -56,7 +56,7 @@ var PatchCircuitsProviderAccountsCmd = &cobra.Command{
 	Use:   "patchCircuitsProviderAccounts",
 	Short: "PATCH a list of Provider Account objects.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   PATCH a list of Provider Account objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		apiConnectionPatch("cmd.circuits.circuits_api_url.provider_accounts_id")

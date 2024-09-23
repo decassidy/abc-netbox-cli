@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Derrick Cassidy - Metropolis Technologies, Inc.
+Copyright © 2024 Derrick Cassidy.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ THE SOFTWARE.
 package circuits
 
 import (
-	"github.com/decassidy/metropolis-netbox-cli/cmd/dcim"
+	"github.com/decassidy/abc-netbox-cli/cmd/dcim"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"log"
@@ -58,17 +58,17 @@ var GetCircuitsProviderNetworksCmd = &cobra.Command{
 	Use:   "getCircuitsProviderNetworks",
 	Short: "GET a list of Provider Network objects.",
 	Long: `
-Metropolis Netbox Automation Tools:
+ABC Netbox Automation Tools:
   GET a list of Provider Network objects.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		responseObject := new(providerNetworks)
 		ApiConnectionNonID(responseObject, "GET", "cmd.circuits.circuits_api_url.provider_networks")
 
 		if responseObject.Count != 0 {
-			color.Cyan("\nMetropolis Total Provider Networks in Netbox: "+color.YellowString("%d"), responseObject.Count)
+			color.Cyan("\nABC Total Provider Networks in Netbox: "+color.YellowString("%d"), responseObject.Count)
 			for _, network := range responseObject.Results {
 				color.Cyan("\n============================================================================")
-				color.Cyan("\n\tMetropolis Provider Network Name: "+color.YellowString("%s\n"), network.Display)
+				color.Cyan("\n\tABC Provider Network Name: "+color.YellowString("%s\n"), network.Display)
 				color.Cyan("============================================================================\n")
 				color.Cyan("\tID: "+color.YellowString("%d"), network.Id)
 				color.Cyan("\tURL: "+color.YellowString("%s"), network.Url)
@@ -119,7 +119,7 @@ Metropolis Netbox Automation Tools:
 				color.Cyan("\tLast Updated: "+color.YellowString("%s"), network.LastUpdated)
 			}
 		} else {
-			color.Cyan("  Metropolis Total Provider Networks in Netbox: " + color.RedString("No provider networks found on the server\n"))
+			color.Cyan("  ABC Total Provider Networks in Netbox: " + color.RedString("No provider networks found on the server\n"))
 		}
 	},
 }
